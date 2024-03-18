@@ -1,0 +1,159 @@
+@import url('https://fonts.googleapis.com/css2?family=Exo+2:wght@900&family=PT+Sans:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Exo+2:wght@900&family=PT+Sans:wght@700&family=Roboto+Mono&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Exo 2', sans-serif;
+    color: #fff;
+}
+html, body{
+    height: 100%;
+    width: 100%;
+}
+#main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    background-color: grey  ;
+}
+#center{
+    position: relative;
+    overflow: hidden;
+    height: 100%;
+    width: 100%;
+    background: #000;
+}
+.img-container{
+    position: absolute;
+    height: 100%;
+    width: 0%;
+}
+
+img{
+    height: 100%;
+    width: 100%;
+}
+#gradient1{
+    position: absolute;
+    z-index: 100;
+    top: 0;
+    width: 100%;
+    height: 40%;
+    background: linear-gradient(to top, transparent, rgba(0,0,0,0.7), black);
+}
+#gradient2{
+    position: absolute;
+    z-index: 101;
+    left: 0;
+    width: 50%;
+    height: 100%;
+    background: linear-gradient(to left, transparent, rgba(0,0,0,0.5), black);
+}
+#nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: fixed;
+    z-index: 200;
+    height: 20%;
+    width: 100%;
+    padding: 15px 20px;
+}
+#nav>h1{
+    font-size: 35px;
+    margin-left: 10px;
+    font-weight: 800;
+}
+#nav button{
+    margin-top: 15px;
+    padding: 20px 40px;
+    font-size: 40px;
+    border: none;
+    background: transparent;
+    cursor: pointer;
+}
+#navigation{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+}
+#navigation>h3{
+    cursor: pointer;
+    margin: 30px 10px;
+    font-size: 25px;
+    font-weight: 800;
+    position: relative;
+    transition: 0.3s;
+}
+
+#navigation>h3::before{
+    content: "";
+    position: absolute;
+    height: 4px;
+    background-color: #eb18eb;
+    width: 0;
+    transition: width 0.3s ease-in-out;
+    top: 110%;
+    left: 0;
+    right: 100%;
+}
+#navigation>h3:hover::before {
+    width: 100%;
+}
+#navigation>h3:focus{
+    width: 100%;
+}
+
+#text{
+    overflow: hidden;
+    width: 700px;
+    height: 240px;
+    position: absolute;
+    top: 30%;
+    left: 5%;
+    z-index: 300;
+    /* background-color: red; */
+}
+.class-text{
+    position: absolute;
+    top: 240px;
+}
+.class-text h1{
+    font-size: 70px;
+    line-height: 1;
+}
+.class-text p{
+    margin: 20px 0;
+    font-size: 20px;
+    font-family: 'Roboto Mono', monospace;
+}
+#boxes{
+    position: absolute;
+    bottom: 20%;
+    left: 2%;
+    z-index: 555;
+    height: 80px;
+    width: 250px;
+    /* background-color: red; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.box{
+    height: 30px;
+    width: 30px;
+    background-color: #333334;
+    margin: 10px;
+    border-radius: 5px;
+    border: none;
+}
+
+.box:focus{
+    background-color: #eb18eb;
+}
+
